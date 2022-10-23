@@ -1,0 +1,245 @@
+header {
+  height: 100vh;
+  padding-top: 7rem;
+}
+
+.efaGep {
+  color: rgb(220, 208, 208) !important;
+}
+h5 > span {
+  color: rgb(238, 106, 106);
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* =============== CTA ============== */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* =============== HEADER SOCIALS ============== */
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* =============== ME ============== */
+.wael {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.me {
+  background: linear-gradient(var(--color-primary), rgb(1, 153, 247));
+  width: 22rem;
+  height: 27rem;
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 10rem 10rem;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  -webkit-filter: drop-shadow(0mm 0mm 2mm rgb(2, 174, 247));
+  z-index: 2;
+}
+.me img {
+  width: 100%;
+  height: 120%;
+  padding-bottom: 10px;
+}
+.techo img {
+  width: 3.5rem;
+}
+.boot,
+.css,
+.js,
+.mongo,
+.python,
+.html,
+.react,
+.node,
+.figma,
+.redux {
+  position: absolute;
+  left: 47.8%;
+  transform: translateX(-50%);
+  margin-top: 15rem;
+  background: none;
+  -webkit-animation: ro1 10s linear infinite;
+}
+.boot {
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(174, 2, 247));
+}
+.css {
+  -webkit-animation-delay: 1s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(2, 14, 247));
+}
+.js {
+  -webkit-animation-delay: 2s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(227, 247, 2));
+  border-radius: 13%;
+  overflow: hidden;
+}
+.react {
+  -webkit-animation-delay: 3s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(2, 178, 247));
+}
+.mongo {
+  -webkit-animation-delay: 4s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(2, 247, 18));
+}
+.html {
+  -webkit-animation-delay: 5s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(247, 104, 2));
+}
+.node {
+  -webkit-animation-delay: 6s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(2, 247, 47));
+}
+.python {
+  -webkit-animation-delay: 7s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(2, 120, 247));
+}
+.figma {
+  -webkit-animation-delay: 8s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(247, 92, 2));
+}
+.redux {
+  -webkit-animation-delay: 9s;
+  -webkit-filter: drop-shadow(0mm 0mm 1mm rgb(247, 2, 239));
+}
+@keyframes ro1 {
+  0% {
+    -webkit-transform: rotate(0deg) translate(-14rem) rotate(0deg);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+
+    z-index: 5;
+  }
+
+  80% {
+    z-index: 0;
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg) translate(-14rem) rotate(-360deg);
+  }
+}
+
+/* =============== SCROLL DOWN ============== */
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ================= */
+@media screen and (max-width: 1024px) {
+  .me {
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  .boot,
+  .css,
+  .js,
+  .mongo,
+  .python,
+  .html,
+  .react,
+  .node,
+  .figma,
+  .redux {
+    top: 0%;
+    left: 46.5%;
+  }
+}
+
+/* ================ MEDIA QUERIES (SMALL DEVICES) ================= */
+@media screen and (max-width: 600px) {
+  header {
+    height: 90vh;
+    /* added after tutorial */
+    padding-top: 4rem;
+  }
+  .me {
+    width: 94%;
+    max-width: 20rem;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+  .wael {
+    height: 390px;
+    transform: scale(0.9);
+  }
+
+  .boot,
+  .css,
+  .js,
+  .mongo,
+  .python,
+  .html,
+  .react,
+  .node,
+  .figma,
+  .redux {
+    top: 25px;
+    left: 44%;
+  }
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+
+  /* added after tutorial */
+  .cta {
+    margin-top: 1.7rem;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .wael {
+    height: 390px;
+    transform: scale(0.7);
+  }
+  .boot,
+  .css,
+  .js,
+  .mongo,
+  .python,
+  .html,
+  .react,
+  .node,
+  .figma,
+  .redux {
+    top: 25px;
+    left: 43%;
+  }
+}
